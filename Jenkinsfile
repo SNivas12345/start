@@ -1,5 +1,10 @@
 pipeline {
-  agent none
+  agent {
+    node {
+      label 'nodeapp.prod'
+    }
+    
+  }
   stages {
     stage('input') {
       parallel {
